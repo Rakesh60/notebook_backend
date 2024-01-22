@@ -5,7 +5,7 @@ import {connect} from 'mongoose'
 const connectToMongo=async()=>{
  
     try {
-        await connect('mongodb+srv://rakeshibm909:rakesh12345@meardatabase.fzh6dii.mongodb.net/eNotebook');
+        await connect(process.env.MONGO_URI);
         console.log("----Database connected Successfully")
         
     } catch (error) {
