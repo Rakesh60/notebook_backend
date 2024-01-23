@@ -1,4 +1,5 @@
 import "dotenv/config";
+import jwt from 'jsonwebtoken'
 
 import jwt from "jsonwebtoken";
 
@@ -12,6 +13,7 @@ const fetchUser = (req, res, next) => {
   try {
     const { userId } = jwt.verify(token, "" + process.env.JWT_SECRET);
     req.userId = userId;
+    console.log("userId:", req.userId);
     console.log("Fetch user :", userId);
     next();
   } catch (error) {
