@@ -5,7 +5,7 @@ import "dotenv/config.js";
 
 const router = express.Router();
 import User from "../models/user.js";
-import fetchUser from "./middleware/fetchUser.js";
+import fetchUser from "../middleware/fetchUser.js";
 
 //* Route 1: Create a User using Post /api/auth/signup  . no login required
 router.post("/signup", async (req, res) => {

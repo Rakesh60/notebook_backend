@@ -1,7 +1,7 @@
 import "dotenv/config";
 import jwt from 'jsonwebtoken'
 
-import jwt from "jsonwebtoken";
+
 
 const fetchUser = (req, res, next) => {
   const token = req.header("auth-token");
