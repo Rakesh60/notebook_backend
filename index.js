@@ -11,15 +11,6 @@ const port = 4000;
 // middle ware
 app.use(express.json());
 app.use(cors());
-// app.use(
-//   cors({
-//     origin: [
-//       "https://vercel.com/rakesh-kumar-guptas-projects/notebook-backend",
-//     ],
-//     methods: ["POST", "GET"],
-//     credentials: true,
-//   })
-// );
 
 // Available routes
 app.get("/", (req, res) => {
